@@ -15,9 +15,12 @@ set $term kitty
 # Backgrounds directory
 set $backgrounds $HOME/.config/sway/backgrounds
 
-# Note: pass the final command to swaymsg so that the resulting window can be
-# opened on the original workspace that the command was run on.
-set $menu dmenu_path | dmenu | xargs swaymsg exec --
+# Scripts
+set $scripts $HOME/.config/sway/scripts
+set $focused_monitor $scripts/get-name-of-monitor-containing-focused-window.sh
+
+# dmenu application launcher
+set $menu dmenu_path | dmenu -m $($focused_monitor) | xargs swaymsg exec --
 
 # Set background
 output * bg $backgrounds/city-wallpaper.jpg fit
