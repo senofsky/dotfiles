@@ -18,6 +18,7 @@ set $backgrounds $HOME/.config/sway/backgrounds
 # Scripts
 set $scripts $HOME/.config/sway/scripts
 set $focused_monitor $scripts/get-name-of-monitor-containing-focused-window.sh
+set $cwd_of_focused_window $scripts/get-cwd-of-focused-window.sh
 
 # dmenu application launcher
 set $menu dmenu_path | dmenu -m $($focused_monitor) | xargs swaymsg exec --
@@ -34,6 +35,9 @@ output eDP-1 pos 0 0 res 1920x1080
 #
     # Start a terminal
     bindsym $mod+Return exec $term
+
+    # Start a terminal with its directory set to the CWD of the focused window
+    bindsym $mod+Shift+Return exec $term --directory $($cwd_of_focused_window)
 
     # Kill focused window
     bindsym $mod+Shift+q kill
