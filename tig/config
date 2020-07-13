@@ -1,0 +1,4 @@
+# Set git-commit to always use verbose flag
+bind main    C !git commit --verbose
+bind status  C !git commit --verbose
+bind generic C !git commit --verbose
