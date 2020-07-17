@@ -10,4 +10,4 @@ focused_window_pid=$(swaymsg -t get_tree | jq '.. | select(.type?) | select(.typ
 shell_pid=$(pgrep --newest --parent $focused_window_pid)
 
 # Reads (which prints) the symbolic link to the shell's CWD
-readlink /proc/$shell_pid/cwd || echo $HOME
+readlink -f /proc/$shell_pid/cwd || echo $HOME
