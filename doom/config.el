@@ -64,3 +64,6 @@
       :g "C-S-j" '+evil/window-move-down
       :g "C-S-k" '+evil/window-move-up
       :g "C-S-l" '+evil/window-move-right)
+
+;; keybinding to start vterm
+(map! :leader :n "v" 'vterm)
