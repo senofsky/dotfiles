@@ -54,3 +54,13 @@
 ;;
 ;; You can also try 'gd' (or 'C-c c d') to jump to their definition and see how
 ;; they are implemented.
+
+;; vim-like keybindings for window navigation
+(map! :g "C-h"   'evil-window-left
+      :g "C-j"   'evil-window-down
+      :g "C-k"   'evil-window-up
+      :g "C-l"   'evil-window-right
+      :g "C-S-h" '+evil/window-move-left
+      :g "C-S-j" '+evil/window-move-down
+      :g "C-S-k" '+evil/window-move-up
+      :g "C-S-l" '+evil/window-move-right)
