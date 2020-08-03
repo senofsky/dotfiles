@@ -71,8 +71,8 @@ HYPHEN_INSENSITIVE="true"
 plugins=(
     git
     systemd
-    zsh-syntax-highlighting
     zsh-autosuggestions
+    zsh-syntax-highlighting
 )
 
 source $ZSH/oh-my-zsh.sh
