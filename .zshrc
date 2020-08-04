@@ -71,6 +71,7 @@ HYPHEN_INSENSITIVE="true"
 plugins=(
     autojump
     emacs
+    extract
     git
     systemd
     zsh-autosuggestions
