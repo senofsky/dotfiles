@@ -97,19 +97,6 @@ source $ZSH/oh-my-zsh.sh
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
 
-# Set personal aliases, overriding those provided by oh-my-zsh libs,
-# plugins, and themes. Aliases can be placed here, though oh-my-zsh
-# users are encouraged to define aliases within the ZSH_CUSTOM folder.
-# For a full list of active aliases, run `alias`.
-#
-# Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
-
-#source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-
-bindkey -v
-
 PATH="$PATH:$(ruby -e 'puts Gem.user_dir')/bin"
 PATH="$PATH:$HOME/.local/bin"
 
@@ -121,6 +108,11 @@ screenshot() {
         printf "Taking a screenshot failed\n"
     fi
 }
+
+# Set personal aliases, overriding those provided by oh-my-zsh libs,
+# plugins, and themes. Aliases can be placed here, though oh-my-zsh
+# users are encouraged to define aliases within the ZSH_CUSTOM folder.
+# For a full list of active aliases, run `alias`.
 
 alias sudo="sudo "
 alias vpn="sudo openvpn --config $HOME/vpn/gw-udp-1194-mark.senofsky-config.ovpn"
