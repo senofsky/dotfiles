@@ -24,6 +24,16 @@
 (setq doom-font (font-spec :family "Fira Code" :size 14 :weight 'regular)
       doom-variable-pitch-font (font-spec :family "Fira Code" :size 14))
 
+(after! unicode-fonts
+  (dolist (unicode-block '("Mathematical Alphanumeric Symbols"
+                           "Mathematical Operators"
+                           "Miscellaneous Mathematical Symbols-A"
+                           "Miscellaneous Mathematical Symbols-B"
+                           "Miscellaneous Symbols"
+                           "Miscellaneous Symbols and Arrows"
+                           "Miscellaneous Symbols and Pictographs"))
+      (push "DejaVu Math TeX Gyre" (cadr (assoc unicode-block unicode-fonts-block-font-mapping)))))
+
 ;; There are two ways to load a theme. Both assume the theme is installed and
 ;; available. You can either set `doom-theme' or manually load a theme with the
 ;; `load-theme' function. This is the default:
