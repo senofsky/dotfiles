@@ -66,5 +66,14 @@ endfunction
 let mapleader=" "
 nmap <leader>q :NERDTreeToggle<CR>
 nmap <leader>g :Goyo<CR>
+nmap <leader>t :call TrimWhitespace()<CR>
+nmap <C-h> <C-w><C-h>
+nmap <C-j> <C-w><C-j>
+nmap <C-k> <C-w><C-k>
+nmap <C-l> <C-w><C-l>
+nmap <C-s> <C-w>s
+nmap <C-c> <C-w>v
+
 "nmap <silent><Leader>b :call setbufvar(winbufnr(popup_atcursor(systemlist("cd " . shellescape(fnamemodify(resolve(expand('%:p')), ":h")) . " && git log --no-merges -n 1 -L " . shellescape(line("v") . "," . line(".") . ":" . resolve(expand("%:p")))), { "padding": [1,1,1,1], "pos": "botleft", "wrap": 0 })), "&filetype", "git")<CR>
+"
 nmap <silent><Leader>b :call setbufvar(winbufnr(popup_atcursor(split(system("git log -n 1 -L " . line(".") . ",+1:" . expand("%:p")), "\n"), { "padding": [1,1,1,1], "pos": "botleft", "wrap": 0 })), "&filetype", "git")<CR>
