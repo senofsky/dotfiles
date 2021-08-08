@@ -4,7 +4,7 @@
 autoload -Uz compinit
 compinit
 # Completion for kitty
-kitty + complete setup zsh | source /dev/stdin
+# kitty + complete setup zsh | source /dev/stdin
 
 # Path to your oh-my-zsh installation.
 export ZSH="/home/senofsky/.oh-my-zsh"
@@ -140,4 +140,5 @@ setopt HIST_VERIFY               # Don't execute immediately upon history expans
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 export PATH="$PATH:$HOME/.rvm/bin"
 
+[ -f ~/.cesium-dotfiles/.zshrc ] && source ~/.cesium-dotfiles/.zshrc
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
